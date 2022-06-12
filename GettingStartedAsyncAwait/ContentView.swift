@@ -17,45 +17,25 @@ struct CurrentDate: Decodable, Identifiable {
 }
 
 struct ContentView: View {
-    
-    @State private var currentDates: [CurrentDate] = []
-    
-    private func getDate() async throws -> CurrentDate? {
-        guard let url = URL(string: "https://ember-sparkly-rule.glitch.me/current-date") else {
-            fatalError("URL is incorrect!")
-        }
-        
-       let (data, _) = try await URLSession.shared.data(from: url)
-        return try? JSONDecoder().decode(CurrentDate.self, from: data)
-    }
-    
-    //HAVE TO ADD "async" to all funcs that use funcs with async
-    private func populateDates() async {
-       
-        do {
-            guard let currentDate = try await getDate() else {return}
-            currentDates.append(currentDate)
-        } catch {
-            print(error)
-        }
-    }
+
+    @StateObject private var currentDateListVM = CurrentDateListViewModel()
 
     var body: some View {
         NavigationView {
-            List(currentDates) { currentDate in
+            List(currentDateListVM.currentDates, id: \.id) { currentDate in
                 Text(currentDate.date)
             }.listStyle(.plain)
             
             .navigationTitle("Dates")
             .navigationBarItems(trailing: Button(action: {
                 Task {
-                    await populateDates()
+                     await currentDateListVM.populateDates()
                 }
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
             .task {
-               await populateDates()
+                 await currentDateListVM.populateDates()
             }
         }
     }
