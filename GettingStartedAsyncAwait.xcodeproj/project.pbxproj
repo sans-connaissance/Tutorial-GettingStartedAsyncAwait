@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41658EE02855762E0063E288 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658EDF2855762E0063E288 /* Webservice.swift */; };
 		41658EE2285576AA0063E288 /* CurrentDateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658EE1285576AA0063E288 /* CurrentDateListViewModel.swift */; };
+		41658EE4285603490063E288 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41658EE3285603490063E288 /* CurrentDate.swift */; };
 		8D8D5D7A2698BA3D0075CB16 /* GettingStartedAsyncAwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D5D792698BA3D0075CB16 /* GettingStartedAsyncAwaitApp.swift */; };
 		8D8D5D7C2698BA3D0075CB16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D5D7B2698BA3D0075CB16 /* ContentView.swift */; };
 		8D8D5D7E2698BA3E0075CB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8D5D7D2698BA3E0075CB16 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		41658EDF2855762E0063E288 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		41658EE1285576AA0063E288 /* CurrentDateListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateListViewModel.swift; sourceTree = "<group>"; };
+		41658EE3285603490063E288 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
 		8D8D5D762698BA3D0075CB16 /* GettingStartedAsyncAwait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GettingStartedAsyncAwait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8D5D792698BA3D0075CB16 /* GettingStartedAsyncAwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedAsyncAwaitApp.swift; sourceTree = "<group>"; };
 		8D8D5D7B2698BA3D0075CB16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		8D8D5D782698BA3D0075CB16 /* GettingStartedAsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
+				41658EE3285603490063E288 /* CurrentDate.swift */,
 				8D8D5D792698BA3D0075CB16 /* GettingStartedAsyncAwaitApp.swift */,
 				41658EDF2855762E0063E288 /* Webservice.swift */,
 				41658EE1285576AA0063E288 /* CurrentDateListViewModel.swift */,
@@ -146,6 +149,7 @@
 				8D8D5D7C2698BA3D0075CB16 /* ContentView.swift in Sources */,
 				8D8D5D7A2698BA3D0075CB16 /* GettingStartedAsyncAwaitApp.swift in Sources */,
 				41658EE2285576AA0063E288 /* CurrentDateListViewModel.swift in Sources */,
+				41658EE4285603490063E288 /* CurrentDate.swift in Sources */,
 				41658EE02855762E0063E288 /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
