@@ -42,16 +42,21 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(1...10, id: \.self) { index in
-                Text("\(index)")
+            List(currentDates) { currentDate in
+                Text(currentDate.date)
             }.listStyle(.plain)
             
             .navigationTitle("Dates")
             .navigationBarItems(trailing: Button(action: {
-                // button action
+                Task {
+                    await populateDates()
+                }
             }, label: {
                 Image(systemName: "arrow.clockwise.circle")
             }))
+            .task {
+               await populateDates()
+            }
         }
     }
 }
